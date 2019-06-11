@@ -12,6 +12,10 @@ FOREACH (source_file ${check_PROGRAMS})
         ${source_file}
     )
     ADD_TEST (${source_file_we} ${source_file_we})
+    SET_PROPERTY (TARGET ${source_file_we}
+                  APPEND_STRING PROPERTY COMPILE_FLAGS " -O0 -g --coverage")
+    SET_PROPERTY (TARGET ${source_file_we}
+                  APPEND_STRING PROPERTY LINK_FLAGS " --coverage")
     TARGET_LINK_LIBRARIES (${source_file_we}
         ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
     )

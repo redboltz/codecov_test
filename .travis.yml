@@ -14,6 +14,7 @@ matrix:
             - llvm-toolchain-trusty
             - sourceline: 'ppa:mhier/libboost-latest'
           packages:
+            - lcov
             - g++-multilib
             - gcc-multilib
             - gcc-7-multilib
