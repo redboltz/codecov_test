@@ -5,7 +5,7 @@ message(STATUS "codecov test")
 message(STATUS "CMAKE_CURRENT_SOURCE_DIR:${CMAKE_CURRENT_SOURCE_DIR}")
 message(STATUS "CMAKE_CURRENT_BINARY_DIR:${CMAKE_CURRENT_BINARY_DIR}")
 
-find_package (Boost 1.69.0 REQUIRED COMPONENTS unit_test_framework)
+find_package (Boost 1.67.0 REQUIRED COMPONENTS unit_test_framework)
 
 include_directories(include)
 

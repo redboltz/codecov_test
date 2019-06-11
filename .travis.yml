@@ -7,8 +7,6 @@ compiler: clang
 script:
   - mkdir build && cd build && cmake -DCMAKE_CXX_COMPILER="${CXX}" -DCMAKE_C_COMPILER="${CC}" .. && travis_wait 50 make $MAKEFLAGS VERBOSE=1 && ctest -VV
 
-
-
 after_success:
   # Create lcov report
   - lcov --capture --directory . --output-file coverage.info
