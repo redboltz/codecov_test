@@ -9,14 +9,14 @@ inline int mul(int a, int b) {
     return a * b;
 }
 
-int mul2(int a, int b) {
+inline int mul2(int a, int b) {
     return a * b;
 }
 
-int mul3(int a, int b) {
+inline int mul3(int a, int b) {
     return a * b;
 }
-int mul4(int a, int b) {
+inline int mul4(int a, int b) {
     return a * b;
 }
 
