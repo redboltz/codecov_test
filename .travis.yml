@@ -10,8 +10,10 @@ matrix:
         apt:
           sources:
             - llvm-toolchain-trusty
+            - sourceline: 'ppa:mhier/libboost-latest'
           packages:
             - lcov
+            - boost1.67
 
 script:
   - mkdir build && cd build && cmake -DCMAKE_CXX_COMPILER="${CXX}" -DCMAKE_C_COMPILER="${CC}" .. && travis_wait 50 make $MAKEFLAGS VERBOSE=1 && ctest -VV
