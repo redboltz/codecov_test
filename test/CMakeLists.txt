@@ -13,7 +13,7 @@ FOREACH (source_file ${check_PROGRAMS})
     )
     ADD_TEST (${source_file_we} ${source_file_we})
     SET_PROPERTY (TARGET ${source_file_we}
-                  APPEND_STRING PROPERTY COMPILE_FLAGS " -O0 -g --coverage -ftest-coverage -fno-inline")
+                  APPEND_STRING PROPERTY COMPILE_FLAGS " -std=c++17 -O0 -g --coverage -ftest-coverage -fno-inline")
     SET_PROPERTY (TARGET ${source_file_we}
                   APPEND_STRING PROPERTY LINK_FLAGS " --coverage")
     TARGET_LINK_LIBRARIES (${source_file_we}
